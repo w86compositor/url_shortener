@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'urls/new'
+  resources :urls, only [:new, :create]
 
-  get 'urls/create'
+  root to: 'urls#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
