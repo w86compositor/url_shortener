@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :urls, only [:new, :create]
+  resources :urls
 
   root to: 'urls#new'
 

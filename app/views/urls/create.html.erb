@@ -1,3 +1,33 @@
-<h1>Your url for <%= @url.long_url %> is: </h1>
-<%= link_to @url.short_url, @url.short_url, target: "_blank" %><br /><br />
-<%= link_to "Create another Url", root_path %>
+<div class="container">
+	<div class="row">
+		<div class="col text-center">
+			<h4>Your new shortened url is:</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-center">
+			<%= @url.short_url %>
+		</div>
+	</div>
+</div> <br><br>
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-6">
+			<%= link_to "Link to Short ULR", @url.short_url, class: "btn btn-primary", target: "_blank" %>
+		</div>
+		<div class="col-md-6">
+			<%= link_to "Link to Long URL", @url.long_url, class: "btn btn-primary", target: "_blank" %>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row text-center">
+		<div class="col">
+			<%= link_to "Create another Url", root_path, class: "btn btn-danger" %>
+		</div>
+	</div>
+</div>
+
+<figure class="squibbles"></figure>
+
+
